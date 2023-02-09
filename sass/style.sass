@@ -1,27 +1,44 @@
+//Переменные предпроцессора SASS
+$color-gray: #777777
+$color-rown: #BA8554
+$color-dark-brown: #A14F03
+$color-white: #FAFAFA
+$color-dark: #000000
+
+$box-shadow: (0rem 4rem 4rem rgba($color-dark, .15))
+
+//mixin заранее заготовленный шабон для отображения SASS на странице сайта
+@mixin style-link($color)
+    display: inline-block
+    text-transform: uppercase
+    text-decoration: none
+    color: $color
+
 *, ::after, ::before
     margin: 0
     padding: 0
     box-sizing: border-box
 
+// Размеры шрифта указанные по умолчанию на HTML странице, необходимо для аботы с rem переменными
 html
     font-size: 10px
 
 body
     font-family: "Roboto"
     font-weight: 400
-    color: gray
+    color: $color-gray
     font-size: 1.6rem
     letter-spacing: .2rem
     padding: 5rem
     background-color: white
 
 .contener
-    background-color: #F7F7F7
+    background-color: $color-white
 
 .header
     position: relative
     height: 95vh
-    background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/header-background.jpg) center / cover no-repeat
+    background: linear-gradient(90deg, rgba($color-rown, 0.7) 0.03%, rgba($color-dark, 0.7) 99.94%), url(../img/header-background.jpg) center / cover no-repeat
     clip-path: polygon(0% 0%,100% 0%, 100% 95%, 0% 85%)
     &__logo
         position: absolute
@@ -62,25 +79,23 @@ body
 
 .btn
     &:link, &:visited
-        text-transform: uppercase
-        text-decoration: none
-        color: #777777
+        //Вызов заранее аготовленных шаблонов mixen функций
+        @include style-link($color-gray)
         padding: 1.5rem 4rem
         background-color: #ffffff
         border-radius: 5rem
-        display: inline-block
         transition: all .5s
         position: relative
         font-size: 2rem
     &:hover
         transform: translateY(-.4rem)
-        box-shadow: (0rem .4rem .4rem rgba(0, 0, 0, .3))
+        box-shadow: (0rem .4rem .4rem rgba($color-dark, .3))
         &::after
             opacity: 0
             transform: scaleX(1.5) scaleY(1.8)
     &:active
         transform: translateY(-.2rem)
-        box-shadow: (0rem 4rem 4rem rgba(0, 0, 0, .15))
+        box-shadow: $box-shadow
     &::after
         content: ""
         background-color: #ffffff
@@ -97,14 +112,14 @@ body
         animation: btnToUp 2s ease .7s
         animation-fill-mode: backwards
 
+//Анимации отдельных элемментов сайта, обыно указываются в самом конце что бы не нарушать целостность SASS структуры
 @keyframes btnToUp
     0%
         opacity: 0
         transform: translateY(100%)
     100%
         opacity: 1
-        transform: translateY(0%)
-
+        transform: translateY(0)
 @keyframes leftToRight
     0%
         opacity: 0
@@ -113,8 +128,7 @@ body
         transform: translate(.5%)
     100%
         opacity: 1
-        transform: translateX(0%)
-
+        transform: translateX(0)
 @keyframes rightToLeft
     0%
         opacity: 0
@@ -123,6 +137,5 @@ body
         transform: translate(-0.5%)
     100%
         opacity: 1
-        transform: translateX(0%)
-
-        
+        transform: translateX(0)
+     
