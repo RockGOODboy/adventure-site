@@ -1,0 +1,42 @@
+.btn
+    &:link, &:visited
+        //Вызов заранее аготовленных шаблонов mixen функций
+        @include style-link($color-gray)
+        padding: 1.5rem 4rem
+        background-color: #ffffff
+        border-radius: 5rem
+        //Переходное состояние между двумя состояниями элемента элемента
+        transition: all .5s
+        position: relative
+        font-size: 2rem
+    //псевдо класс срабатывающий при наведении кусором мыши
+    &:hover
+        transform: translateY(-.4rem)
+        //Добавления тени элементу
+        box-shadow: (0rem .4rem .4rem rgba($color-dark, .3))
+        //Создает псевдоэлемент, который является последним потоком выбранного элемента
+        &::after
+            //устанавливает не прозрачность элемента
+            opacity: 0
+            transform: scaleX(1.5) scaleY(1.8)
+    //Псевдокласс соответствует элементу в момент, когда он активируется ползователем
+    &:active
+        transform: translateY(-.2rem)
+        box-shadow: $box-shadow
+    &::after
+        //Заменят элемент сгенерированным значением
+        content: ""
+        background-color: #ffffff
+        width: 100%
+        height: 100%
+        border-radius: 5rem
+        display: inline-block
+        position: absolute
+        top: 0
+        left: 0
+        //Положение позиционированного элемента и его дчерних элементов
+        z-index: -1
+        transition: all .4s
+    &_up
+        animation: btnToUp 2s ease .7s
+        animation-fill-mode: backwards

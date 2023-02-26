@@ -1,0 +1,26 @@
+.btn-text
+  &:link, &:visited
+    //Размер текста
+    font-size: 1.6rem
+    //Ратояие между символоми в тексте
+    letter-spacing: .2rem
+    //Толщина теста
+    font-weight: 700
+    color: $color-rown
+    //Стилистика ссылки по умолчанию
+    text-decoration: none
+    padding: 1rem
+    border-bottom: 1px solid $color-rown
+    //CSS блок размером с контент содержащийся в нем
+    display: inline-block
+    //Плавность анимации кнопки
+    transition: .5s all
+  &:hover
+    background-color: $color-rown
+    color: $color-white
+    box-shadow: $box-shadow
+    //Изменение позиции кнопки при новедении на неё, преподнимает кнопку
+    transform: translateY(-.2rem)
+  &:active
+    //возвращение на исходную позицию при нажатии на неё
+    transform: translateY(0rem)

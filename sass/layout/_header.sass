@@ -1,0 +1,25 @@
+.header
+  //Элемент позицианирующий себя в соответствии с нормальным потоком документа, а затем смещается относительно себя
+  position: relative
+  //Обознаения высоты элемента
+  height: 95vh
+  //Создание гадиента поверх изображения, изображение и его позиционирование, а так же отсутствие повтора изображения
+  background: linear-gradient(90deg, rgba($color-rown, 0.7) 0.03%, rgba($color-dark, 0.7) 99.94%), url(../img/header-background.jpg) center / cover no-repeat
+  //Изменение формы отображения пункта 'bacground'
+  clip-path: polygon(0% 0%,100% 0%, 100% 95%, 0% 85%)
+  &__logo
+      //Удаление элемента из обычного потока документов, и его  мокет в страницы не создает пробелов
+      position: absolute
+      left: 5rem
+      top: 5rem
+      width: 5.6rem
+      height: 7rem
+  &__box
+      position: absolute
+      left: 50%
+      top: 40%
+      //Сдвиг элемента или же модифицирует координатное пространство CSS
+      transform: translate(-50%, -50%)
+      width: 100%
+      //Позиционирование текста в его блоке
+      text-align: center
