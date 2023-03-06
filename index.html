@@ -11,6 +11,22 @@
 </head>
 <body>
     <div class="contener">
+        <div class="navigate">
+            <input type="checkbox" class="navigate__togle" id="navi__togle">
+            <label for="navi__togle" class="navigate__botton">
+                <span class="navigate__icon"></span>
+            </label>
+            <div class="navigate__background"></div>
+            <nav class="navigate__nav">
+                <ul class="navigate__list">
+                    <li class="navigate__item"><a href="#" class="navigate__link">о нас</a></li>
+                    <li class="navigate__item"><a href="#" class="navigate__link">скидки</a></li>
+                    <li class="navigate__item"><a href="#" class="navigate__link">лучшие туры</a></li>
+                    <li class="navigate__item"><a href="#" class="navigate__link">калькулятор цены</a></li>
+                    <li class="navigate__item"><a href="#" class="navigate__link">связаться с нам</a></li>
+                </ul>
+            </nav>
+        </div>
         <header class="header">
             <img class="header__logo" src="icon/Icon-logo.svg" alt="Логотип воздушный шар">
             <div class="header__box">
@@ -23,7 +39,7 @@
         </header>
         
         <main>
-            <section class="section-about margin-botton-30">
+            <section class="section-about margin-botton-30" id="about">
                 <div class="margin-botton-80">
                     <h2 class="title-secondory">
                         Невероятное ощущение свобды
@@ -87,78 +103,200 @@
                 </div>
             </section>
 
+            <section class="top-advencher margin-botton-80" id="top-tour">
+                <div class="margin-botton-80">
+                    <h2 class="title-secondory">
+                        НАИБОЛЕЕ ПОПУЛЯРНЫЕ ТУРЫ
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="col-1-of-3">
+                        <div class="cart-top-advenher">
+                            <div class="cart-top-advenher__side cart-top-advenher__side_front">
+                                <div class="cart-top-advenher__img cart-top-advenher__img_1 margin-botton-50"></div>
+                                <h4 class="cart-top-advenher__title">
+                                    <span class="cart-top-advenher__span cart-top-advenher__span_1">групповые</span>
+                                    <br>
+                                    <span class="cart-top-advenher__span cart-top-advenher__span_2">туры</span></h4>
+                                <div class="cart-top-advenher__deskr">
+                                    <ul>
+                                        <li>Группы от 6 человек</li>
+                                        <li>Продолжительность 2 час</li>
+                                        <li>В группе 1 гид</li>
+                                        <li>Дальность полета 6км</li>
+                                        <li>Бесплатные сувениры</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cart-top-advenher__side cart-top-advenher__side_back">
+                                <div class="cart-top-advenher__backSide-box">
+                                    <p class="cart-top-advenher__text cart-top-advenher__text_title margin-botton-80">полная стоймость:</p>
+                                    <p class="cart-top-advenher__text_price margin-botton-80">5990₽</p>
+                                    <a href="#" class="btn">забронировать</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="cart-top-advenher">
+                            <div class="cart-top-advenher__side cart-top-advenher__side_front">
+                                <div class="cart-top-advenher__img cart-top-advenher__img_2 margin-botton-50"></div>
+                                <h4 class="cart-top-advenher__title">
+                                    <span class="cart-top-advenher__span cart-top-advenher__span_1">частные</span>
+                                    <br>
+                                    <span class="cart-top-advenher__span cart-top-advenher__span_2">туры</span></h4>
+                                <div class="cart-top-advenher__deskr">
+                                    <ul>
+                                        <li>Группы от 6 человек</li>
+                                        <li>Продолжительность 2 час</li>
+                                        <li>В группе 1 гид</li>
+                                        <li>Дальность полета 6км</li>
+                                        <li>Бесплатные сувениры</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cart-top-advenher__side cart-top-advenher__side_back">
+                                <div class="cart-top-advenher__backSide-box">
+                                    <p class="cart-top-advenher__text cart-top-advenher__text_title margin-botton-80">полная стоймость:</p>
+                                    <p class="cart-top-advenher__text_price margin-botton-80">5990₽</p>
+                                    <a href="#" class="btn">забронировать</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="cart-top-advenher">
+                            <div class="cart-top-advenher__side cart-top-advenher__side_front">
+                                <div class="cart-top-advenher__img cart-top-advenher__img_3 margin-botton-50"></div>
+                                <h4 class="cart-top-advenher__title">
+                                    <span class="cart-top-advenher__span cart-top-advenher__span_1">смотровые</span>
+                                    <br>
+                                    <span class="cart-top-advenher__span cart-top-advenher__span_2">площадки</span></h4>
+                                <div class="cart-top-advenher__deskr">
+                                    <ul>
+                                        <li>Группы от 6 человек</li>
+                                        <li>Продолжительность 2 час</li>
+                                        <li>В группе 1 гид</li>
+                                        <li>Дальность полета 6км</li>
+                                        <li>Бесплатные сувениры</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cart-top-advenher__side cart-top-advenher__side_back">
+                                <div class="cart-top-advenher__backSide-box">
+                                    <p class="cart-top-advenher__text cart-top-advenher__text_title margin-botton-80">полная стоймость:</p>
+                                    <p class="cart-top-advenher__text_price margin-botton-80">5990₽</p>
+                                    <a href="#" class="btn">забронировать</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-content">
+                    <a href="#" class="btn">забронировать</a>
+                </div>
+            </section>
+
+            <section class="feadBack">
+                <div class="bg-gradient"></div>
+                <video class="video-background" autoplay muted loop>
+                    <source src="video/balloon-background.mp4">
+                    <source src="video/balloon-background.webm">
+                </video>
+                <div class="margin-botton-80">
+                    <h2 class="title-secondory title-secondory_white">
+                        ОТЗЫВЫ НАШИХ КЛИЕНТОВ
+                    </h2>
+                </div>
+                    <div class="row">
+                        <div class="feadBack-card">
+                            <figure class="feadBack-card__img">
+                                <img src="img/photo-man.jpg" alt="">
+                                <figcaption class="feadBack-card__name">АНТОН
+                                    РЯБИН</figcaption>
+                            </figure>
+                            <div class="feadBack__content-card">
+                                <h3 class="title-three margin-botton-10">Я ПОЛУЧИЛ МАССУ ВПЕЧАТЛЕНИЙ</h3>
+                                <p class="text-about">Задача организации, в особенности же дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции влечет.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="feadBack-card">
+                            <figure class="feadBack-card__img">
+                                <img src="img/photo-girl.jpg" alt="">
+                                <figcaption class="feadBack-card__name">ЛИЗА
+                                    ФРОЛОВА</figcaption>
+                            </figure>
+                            <div class="feadBack__content-card">
+                                <h3 class="title-three margin-botton-10">ЭТО БЫЛО ВЕЛИКОЛЕПНО И НЕЗАБЫВАЕМО</h3>
+                                <p class="text-about">Задача организации, в особенности же дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции влечет.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center-content">
+                        <a href="#" class="btn">забронировать</a>
+                    </div>
+            </section>
+
+            <section class="booking" id="contact">
+                <div class="row">
+                    <div class="book">
+                        <div class="book__form">
+                            <form action="#" class="form">
+                                <div class="margin-botton-30">
+                                    <h2 class="title-secondory">
+                                        ЗАБРОНИРОВАТЬ ТУР
+                                    </h2>
+                                </div>
+                                <div class="form__grup">
+                                    <input type="text" class="form__input" placeholder="Введите ваше ФИО" id="name" required>
+                                    <label for="name" class="form__label">Введите ваше ФИО</label>
+                                </div>
+                                <div class="form__grup">
+                                    <input type="email" class="form__input" placeholder="Введите ваш email" id="email" required>
+                                    <label for="email" class="form__label">Введите ваш email</label>
+                                </div>
+                                <div class="form__grup">
+                                    <div class="form__grup_radio">
+                                        <input type="radio" class="form__input_radio" id="tour-group" name="checed">
+                                        <label for="tour-group" class="form__label_radio">
+                                            <span class="form__button-radio"></span>
+                                            Групповой тур</label>
+                                    </div>
+                                    <div class="form__grup_radio">
+                                        <input type="radio" class="form__input_radio" id="tour-individual" name="checed">
+                                        <label for="tour-individual" class="form__label_radio">
+                                            <span class="form__button-radio"></span>
+                                            Индивидуальный тур</label>
+                                    </div>
+                                </div>
+                                <div class="form__grup">
+                                    <button class="btn btn_brown">ЗАБРОНИРОВАТЬ</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
+        <footer class="footer">
+            <div class="row text-aligth-center">
+                <a href="#">
+                    <img src="icon/Icon-logo.svg" alt="" class="footer__logo">
+                </a>
+            </div>
+            <div class="row">
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" class="footer__link">О НАС</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">СКИДКИ</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">ЛУЧШИЕ ТУРЫ</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">КАЛЬКУЛЯТОР ЦЕНЫ</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">СВЯЗАТЬСЯ С НАМИ</a></li>
+                </ul>
+            </div>
+        </footer>
     </div>
-
-
-
-     <!-- <selection class="grid-test">
-            <div class="row">
-                <div class="col-1-of-2">
-                    1-of-2
-                </div>
-                <div class="col-1-of-2">
-                    1-of-2
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-3">
-                    1-of-3
-                </div>
-                <div class="col-1-of-3">
-                    1-of-3
-                </div>
-                <div class="col-1-of-3">
-                    1-of-3
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-3">
-                    1-of-3
-                </div>
-                <div class="col-2-of-3">
-                    2-of-3
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-4">
-                    1-of-4
-                </div>
-                <div class="col-1-of-4">
-                    1-of-4
-                </div>
-                <div class="col-1-of-4">
-                    1-of-4
-                </div>
-                <div class="col-1-of-4">
-                    1-of-4
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-4">
-                    1-of-4
-                </div>
-                <div class="col-1-of-4">
-                    1-of-4
-                </div>
-                <div class="col-2-of-4">
-                    2-of-4
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1-of-4">
-                    1-of-4
-                </div>
-                <div class="col-3-of-4">
-                    3-of-4
-                </div>
-            </div>
-        </selection> -->
 </body>
 </html>

@@ -1,5 +1,5 @@
 .btn
-    &:link, &:visited
+    &, &:link, &:visited
         //Вызов заранее аготовленных шаблонов mixen функций
         @include style-link($color-gray)
         padding: 1.5rem 4rem
@@ -9,7 +9,8 @@
         transition: all .5s
         position: relative
         font-size: 2rem
-    //псевдо класс срабатывающий при наведении кусором мыши
+        border: none
+    //Псевдокласс срабатывающий при наведении кусором мыши
     &:hover
         transform: translateY(-.4rem)
         //Добавления тени элементу
@@ -19,7 +20,7 @@
             //устанавливает не прозрачность элемента
             opacity: 0
             transform: scaleX(1.5) scaleY(1.8)
-    //Псевдокласс соответствует элементу в момент, когда он активируется ползователем
+    //Псевдокласс соответствует элементу в момент, когда он активируется пользователем
     &:active
         transform: translateY(-.2rem)
         box-shadow: $box-shadow
@@ -40,3 +41,10 @@
     &_up
         animation: btnToUp 2s ease .7s
         animation-fill-mode: backwards
+.btn_brown
+    &, &:link, &:visited
+        background: $color-dark-brown
+        color: white
+    &:hover
+    &::after
+        background: $color-dark-brown

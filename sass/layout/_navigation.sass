@@ -1,0 +1,101 @@
+.navigate
+  &__togle
+    //checkbox становится невидемым
+    display: none
+  //Задний фон вспывающего меню
+  &__togle:checked ~ &__background
+    transform: scale(80)
+  //Появление навигационного еню
+  &__togle:checked ~ &__nav
+    width: 100%
+    opacity: 1
+  //При нажатие на кнопку вызова еню исчезает элеент логотипа по середине
+  &__togle:checked + &__botton &__icon
+    background: transparent
+  //Изменение поожения оставшихся элементов
+  &__togle:checked + &__botton &__icon::before
+    top: 0
+    transform: rotate(135deg)
+  &__togle:checked + &__botton &__icon::after
+    top: 0
+    transform: rotate(-135deg)
+  //Настройка визуального отображения кнопки меню
+  &__botton
+    background: #fff
+    width: 9rem
+    height: 9rem
+    border-radius: 50%
+    position: fixed
+    right: 7rem
+    top: 7rem
+    z-index: 12
+    text-align: center
+    cursor: pointer
+  //Настройка заднего фона навигационного меню
+  &__background
+    width: 7rem
+    height: 7rem
+    border-radius: 50%
+    background: radial-gradient($color-rown, $color-dark-brown)
+    position: fixed
+    right: 8rem
+    top: 8rem
+    transition: all .6s
+    z-index: 10
+  //Отобажение навигационного меню
+  &__nav
+    width: 0%
+    height: 100%
+    position: fixed
+    top: 0
+    right: 0
+    opacity: 0
+    transition: all .2s
+    z-index: 11
+  &__list
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    list-style: none
+  &__item
+    text-align: center
+  //Элементы навигационного меню
+  &__link
+    &:link, &:visited
+      color: $color-white
+      font-size: 4rem
+      letter-spacing: .5rem
+      text-decoration: none
+      text-transform: uppercase
+      background: linear-gradient(115deg, transparent 0%, transparent 50%, $color-white 50%)
+      background-size: 220%
+      transition: all .4s
+      display: inline-block
+    &:hover, &:active
+      color: $color-dark-brown
+      background-position: 100%
+      transform: translateX(1rem)
+  //Логотип копк навигацонного меню
+  &__icon
+    position: relative
+    margin-top: 42px
+    &, &::before, &::after
+      width: 35px
+      height: 3px
+      background: $color-dark
+      display: inline-block
+    &::before, &::after
+      content: ""
+      position: absolute
+      left: 0
+      transition: all .15s
+    &::before
+      top: -13px  
+    &::after
+      top: 13px
+  &__botton:hover &__icon::before
+    top: -15px 
+  &__botton:hover &__icon::after
+    top: 15px 
+  
